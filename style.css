@@ -1,0 +1,274 @@
+```css
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: #f1f5f9;
+    line-height: 1.7;
+}
+
+/* Navigation */
+header {
+    background: #111827;
+    padding: 20px 8%;
+    border-bottom: 1px solid #263449;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.logo span,
+.hero h1 span {
+    color: #38bdf8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #f1f5f9;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Home Section */
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.welcome {
+    color: #38bdf8;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    line-height: 1.2;
+}
+
+.hero h2 {
+    font-size: clamp(20px, 3vw, 30px);
+    margin: 15px 0;
+    color: #cbd5e1;
+}
+
+.hero p:not(.welcome) {
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #38bdf8;
+    color: #07111f;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #7dd3fc;
+    transform: translateY(-3px);
+}
+
+/* Common Sections */
+section:not(.hero) {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+#about p {
+    max-width: 750px;
+    margin: auto;
+    color: #cbd5e1;
+}
+
+/* Skills */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill-list span {
+    background: #172338;
+    border: 1px solid #334155;
+    color: #7dd3fc;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.skill-list span:hover {
+    border-color: #38bdf8;
+    box-shadow: 0 0 15px #38bdf833;
+    transform: translateY(-3px);
+}
+
+/* Project Cards */
+.project-card {
+    display: inline-block;
+    vertical-align: top;
+    width: min(100%, 300px);
+    min-height: 150px;
+    margin: 10px;
+    padding: 25px;
+    text-align: left;
+    background: #111c30;
+    border: 1px solid #263449;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.project-card h3 {
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #cbd5e1;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+    box-shadow: 0 8px 25px #00000033;
+}
+
+/* Contact */
+#contact p {
+    margin: 10px 0;
+    color: #cbd5e1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+    background: #111827;
+    border-top: 1px solid #263449;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    section:not(.hero) {
+        padding: 45px 5%;
+    }
+
+    .project-card {
+        margin: 10px 0;
+    }
+}
+```
+```css
+/* Scroll Reveal Animation */
+section:not(.hero) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+```
+```css
+#contact a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #7dd3fc;
+    text-decoration: underline;
+}
+```
+```css
+.project-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 9px 16px;
+    background: #38bdf8;
+    color: #07111f;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: #7dd3fc;
+    transform: translateY(-2px);
+}
+```
